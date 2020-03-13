@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-body">
+      <form [formGroup]="studentForm"> 
+        <div class="form-group">
+          <label class="col-md-4">User ID</label>
+  <input type="text" class="form-control"  formControlName="userId" #userId [(ngModel)] = "studentData.userId" />
+            </div>
+           <div class="form-group">
+            <label class="col-md-4">Full Name</label>
+    <input type="text" class="form-control"  formControlName="fullName" #fullName [(ngModel)] = "studentData.fullName" />
+              </div>
+     <div class="form-group">
+                  <label class="col-md-4">Email</label>
+              <input type="text" class="form-control"  formControlName="email" #email [(ngModel)] = "studentData.email" />
+            </div> 
+            <div class="form-group">
+                <label class="col-md-4">Date Of Birth</label>
+        <input type="text" class="form-control"  formControlName="DOB" #DOB [(ngModel)] = "studentData.DOB" />
+                  </div>
+                  <div class="form-group">
+                      <label class="col-md-4">Person Name</label>
+              <input type="text" class="form-control"  formControlName="Address" #Address [(ngModel)] = "studentData.Address" />
+                        </div>
+     <div class="form-group">
+                            <label class="col-md-4">ParentPhone1 </label>
+                    <input type="text" class="form-control"  formControlName="ParentPhone1" #ParentPhone1 [(ngModel)] = "studentData.ParentPhone1" />
+       </div>
+       <div class="form-group">
+          <label class="col-md-4">ParentPhone2</label>
+  <input type="text" class="form-control"  formControlName="ParentPhone2" #ParentPhone2 [(ngModel)] = "studentData.ParentPhone2"/>
+      </div>
+      <div class="form-group">
+          <label class="col-md-4">Standard</label>
+  <input type="text" class="form-control"  formControlName="Standard" #Standard [(ngModel)] = "studentData.Standard"/>
+      </div> 
+      <div class="form-group">
+      <button (click)="modifyData(userId.value, fullName.value, email.value, DOB.value,Address.value,
+      ParentPhone1.value,ParentPhone2.value,Standard.value)"
+       class="btn btn-primary">Update Student Data</button>
+    </div>
+
+        </form>
+      </div> 
+ 
+      <button (click)="onclick()" >Back</button>
+    </div>

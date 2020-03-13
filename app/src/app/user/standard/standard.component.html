@@ -1,0 +1,51 @@
+<h2>Standard Detail</h2> 
+<div class="container-content"> 
+    <div class="row">
+            <div class="col-md-2"> 
+                 <a *ngFor="let st of std"
+                    routerLink="/studentdata/standard/{{st.branch.A}}"> 
+            <li class="std">
+                  <span class="badge"><h4>{{st.branch.A}}</h4></span>
+            </li>  </a>
+             </div>
+             <div class="col-md-2">
+                    <a *ngFor="let st of std"
+                    routerLink="/studentdata/standard/{{st.branch.B}}"> 
+            <li class="std">
+               <span class="badge"><h4>{{st.branch.B}}</h4></span>
+            </li>
+                   
+                   <!-- <h4>{{st.branch.B}}</h4></a> -->
+             </a>
+             </div> 
+             <div class="col-md-2">
+                    <a *ngFor="let st of std"
+                    routerLink="/studentdata/standard/{{st.branch.C}}"> 
+            <li class="std">
+              <span class="badge"><h4>{{st.branch.C}}</h4></span>
+            </li>
+           
+                   <!-- <h4>{{st.branch.C}}</h4></a> -->
+                  </a>  
+             </div> 
+             <div class="col-md-2"> 
+                    <a *ngFor="let st of std"
+                    routerLink="/studentdata/standard/{{st.branch.D}}"> 
+            <li class="std">
+                        <span class="badge"><h4>{{st.branch.D}}</h4></span>
+            </li>
+                  
+                   <!-- <h4>{{st.branch.D}}</h4></a> -->
+                  </a>     
+             </div>
+            </div> 
+      </div>
+
+<div class="col-md-2">
+ <button class="btn btn-primary" (click)="goBack()">go back</button>
+</div>
+
+  
+
+
+ <!-- routerLink="/standard/{{st.branch.D}}">    -->

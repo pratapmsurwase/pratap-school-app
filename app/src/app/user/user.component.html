@@ -1,0 +1,28 @@
+
+
+<div class="container"> 
+  <div class="row">
+      <div class="col-10">      
+          <nav> 
+          <ul> 
+           <a routerLink="/studentdata/register" routerLinkActive="active">Registration Form</a>
+           <a routerLink="/studentdata/divison" routerLinkActive="active">Standard Detail</a>
+           <a routerLink="/studentdata/studentdetail" routerLinkActive="active">Studdent Detail</a>
+          </ul>
+        </nav>
+             
+      </div> 
+    
+      <div class="col-2">
+          <input type="button" class="btn btn-secondary" (click) ="onLogout()" value="Logout"/>
+        </div>
+   </div>
+
+</div>
+
+    
+ 
+ <div> 
+      <router-outlet></router-outlet>
+  </div>  
+  

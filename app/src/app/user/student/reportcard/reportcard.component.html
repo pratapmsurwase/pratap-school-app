@@ -1,0 +1,31 @@
+<div>
+    <table class="table">
+        <thead class="thead-dark">  
+ <th>Student Progress Data</th>
+           <tr>
+          <th>Student Id</th>
+          <th>User Id</th>
+          <th>Student Name</th>
+          <th>Creation Date</th>
+          <th>English</th>
+          <th>Mathamatics</th>
+          <th>Hindi</th>
+          <th>Updated</th>
+          </tr>
+         </thead>
+          <tbody>
+          <tr *ngFor="let user of studentData">
+           <td>{{user.studentId}}</td>
+           <td>{{user.userId}}</td>
+           <td>{{user.fullName}}</td>
+          <td>{{user.createdAt}}</td> 
+          <td>{{user.English}}</td> 
+          <td>{{user.Matha}}</td>
+          <td>{{user.Hindi}}</td>
+          <td>{{user.updatedAt}}</td>
+               </tr>
+      </tbody> 
+      </table>
+ </div>
+   <button class="btn btn-primary" (click)="goBack()">go back</button>
+

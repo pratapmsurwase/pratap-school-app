@@ -1,0 +1,35 @@
+
+<div>
+    <table class="table">
+        <thead class="thead-dark">  
+ <th>Student Progress Data</th>
+           <tr>
+          <th>Student ID</th>
+          <th>User Id</th>
+          <th>Student Name</th>
+          <th>Creation Date</th>
+          <th>English</th>
+          <th>Mathamatics</th>
+          <th>Hindi</th>
+          <th>Updated</th>
+          <th>Edit</th>
+          </tr>
+         </thead>
+          <tbody>
+          <tr *ngFor="let user of tasks">
+        <!-- <a routerLink="/studentdata/taskadd/{{user._id}}"><td>{{user._id }}</td></a> -->
+        <td>{{user.studentId}}</td>
+        <td>{{user.userId }}</td>
+          <td>{{user.fullName}}</td>
+          <td>{{user.createdAt}}</td> 
+          <td>{{user.English}}</td> 
+          <td>{{user.Matha}}</td>
+          <td>{{user.Hindi}}</td>
+          <td>{{user.updatedAt}}</td>
+         <a routerLink="/studentdata/taskedit/{{user._id}}"><td>{{user._id }}</td></a>
+               </tr>
+      </tbody> 
+      </table>
+ </div>
+   <button class="btn btn-primary" (click)="goBack()">go back</button>
+

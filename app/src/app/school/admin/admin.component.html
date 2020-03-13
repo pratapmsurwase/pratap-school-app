@@ -1,0 +1,22 @@
+<div>
+  <img src={{imageadd}}  id="icon" alt="User Icon"/>
+</div>
+<form #signInForm="ngForm" (ngSubmit)="signInForm.valid && onSubmit(signInForm)">
+    <input type="text" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Student ID" 
+      [ngClass]="{'invalid-textbox' :signInForm.submitted && !email.valid }">
+    <!-- <div *ngIf="signInForm.submitted && email.errors?.pattern">
+      <label class="validation-message">Invalid Student ID.</label>
+    </div> -->
+    <input type="password" name="password" #password="ngModel" [(ngModel)]="model.password" placeholder="password" required minlength="4">
+    <!-- <div *ngIf="signInForm.submitted && password.errors?.minlength">
+      <label class="validation-message">Minimum 4 characters.</label>
+    </div> -->
+    <input type="submit" value="Sign In">
+</form>
+
+
+
+<!-- Error message -->
+<div class="alert" *ngIf="serverErrorMessages">
+    {{serverErrorMessages}}
+</div>

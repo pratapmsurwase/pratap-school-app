@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="studentForm"> 
+          <div class="form-group">
+                  <label class="col-md-4">Student ID</label>
+          <input type="text" class="form-control"  formControlName="_id" #_id  [(ngModel)] = "studentData._id" />
+                    </div>
+      <div class="form-group">
+        <label class="col-md-4">User ID</label>
+<input type="text" class="form-control"  formControlName="userId" #userId  [(ngModel)] = "studentData.userId" />
+          </div>
+         <div class="form-group">
+          <label class="col-md-4">Full Name</label>
+  <input type="text" class="form-control"  formControlName="fullName" #fullName [(ngModel)] = "studentData.fullName" />
+            </div>
+   <div class="form-group">
+                <label class="col-md-4">English</label>
+            <input type="text" class="form-control"  formControlName="English" #English [(ngModel)] = "studentData.English" placeholder="English" />
+          </div> 
+          <div class="form-group">
+              <label class="col-md-4">Hindi</label>
+      <input type="text" class="form-control"  formControlName="Hindi" #Hindi  [(ngModel)] = "studentData.Hindi" placeholder="Hindi" />
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4">Mathametics</label>
+            <input type="text" class="form-control"  formControlName="Matha" #Matha [(ngModel)] = "studentData.Matha" placeholder="Matha" />
+                      </div>
+   
+    <div class="form-group">
+    <button (click)="modifyData(userId.value, fullName.value, English.value, Hindi.value, Matha.value )"
+     class="btn btn-primary">Edit Student Task</button>
+  </div>
+
+      </form>
+  </div> 
+  <div>
+    <button (click)="onclick()" >Back</button>
+  </div>
+    </div>    

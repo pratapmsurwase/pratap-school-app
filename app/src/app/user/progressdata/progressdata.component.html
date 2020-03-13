@@ -1,0 +1,42 @@
+<h3>Student With Standard Data</h3>
+<div class="grid grid-pad"> 
+    
+ 
+     <!-- <a class="col-1-4">
+  <div class="module user">
+ <h3><span class="badge"> FullName {{user.fullName}}</span>{{user.Standard}}</h3>   
+ <span class="badge">{{user.fullName}}</span>{{user.Standard}} 
+  </div>
+  </a> -->
+    <table class="table table-striped">
+       <thead class="thead-dark">  
+          <tr>
+         <th>Student Id</th>
+         <th>Full Name</th>
+         <th>Standard</th>
+         <th>Address</th>
+         <th>Parent Phone1</th>
+         <th>Parent Phone2</th>
+         <th>DOB</th>
+         <th>Email Address</th>
+         <th>Creation Date</th>
+         <th>Edit Student Data</th>
+         </tr>
+        </thead>
+         <tbody>
+         <tr *ngFor="let user of Users">
+        <a routerLink="/studentdata/studenttask/{{user._id}}"><td>{{user._id }}</td></a>
+         <td>{{user.fullName}}</td>
+         <td>{{user.Standard}}</td> 
+         <td>{{user.Address}}</td> 
+         <td>{{user.ParentPhone1}}</td>
+         <td>{{user.ParentPhone2}}</td>
+         <td>{{user.DOB}}</td>
+         <td>{{user.email}}</td>
+         <td>{{user.CreationDateAt}}</td>
+       <a routerLink="/studentdata/student/{{user.userId}}"><td>{{user.userId}}</td></a>
+         </tr>
+     </tbody> 
+     </table>
+</div> 
+<button class="btn btn-primary" (click)="goBack()">go back</button>
