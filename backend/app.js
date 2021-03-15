@@ -22,7 +22,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/dist/school-app/index.html'))
 })
 
-
+console.log('This is command line tool')
 app.listen(Port, () => {
   console.log(`Server Started on Port ${Port}`)  
 })
