@@ -22,7 +22,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/dist/school-app/index.html'))
 })
 
-
+// New comment for github
+console.log('Printing the edge tech')
 app.listen(Port, () => {
   console.log(`Server Started on Port ${Port}`)  
 })
