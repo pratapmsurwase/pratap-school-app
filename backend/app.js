@@ -3,6 +3,8 @@ require('./models/db')
 require('./config/passportConfig')
 const path = require('path') 
 
+//New compileComponents
+console.log('my new console comment- 16-march-21')
 const passport= require('passport')
 const express = require('express')
 const bodyParser = require('body-parser')
